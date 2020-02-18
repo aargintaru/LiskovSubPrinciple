@@ -1,34 +1,16 @@
 namespace LiskovSubPrinciple
 {
-    public class Square : Rectangle
+    public class Square : IShape
     {
-        private int height;
-        private int width;
+        private int side;
 
-        public override int Height
+        public Square(int side)
         {
-            get
-            {
-                return height;
-            }
-            set
-            {
-                height = value;
-                width = value;
-            }
+            this.side = side;
         }
-
-        public override int Width
+        public int GetArea()
         {
-            get
-            {
-                return width;
-            }
-            set
-            {
-                width = value;
-                height = value;
-            }
+            return side * side;
         }
     }
 }

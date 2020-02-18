@@ -1,8 +1,18 @@
 namespace LiskovSubPrinciple
 {
-    public class Rectangle
+    public class Rectangle : IShape
     {
-        public virtual int Height { get; set; }
-        public virtual int Width { get; set; }
+        private int width;
+        private int height;
+
+        public Rectangle(int height, int width)
+        {
+            this.width = width;
+            this.height = height;
+        }
+        public int GetArea()
+        {
+            return height * width;
+        }
     }
 }
